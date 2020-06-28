@@ -17,13 +17,14 @@ namespace ShrekApp
             Console.WriteLine("edit [id] - редактировать заметку");
 
             list.Add(new Note("Shrek", "Is", "Love", 777, "Russia", DateTime.Parse("11.11.11"), "", "", ""));
+
             while (true)
             {
                 shrek(Console.ReadLine());
             }
         }
 
-        public static void shrek(string s)
+        public static void shrek(string s)//обработка команд
         {
             string[] temp;
             try {
