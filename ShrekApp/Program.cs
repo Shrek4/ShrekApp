@@ -45,7 +45,11 @@ namespace ShrekApp
                 temp = s.Split(' ');
                 if (temp[0] == "open") list[Int32.Parse(temp[1])].printfull(Int32.Parse(temp[1]));
                 else if (temp[0] == "edit") list[Int32.Parse(temp[1])].edit(Int32.Parse(temp[1]));
-                else if (temp[0] == "delete") list.RemoveAt(Int32.Parse(temp[1]));
+                else if (temp[0] == "delete")
+                {
+                    list.RemoveAt(Int32.Parse(temp[1])); 
+                    Console.WriteLine("Удалена запись "+ temp[1]);
+                }
             }
             else Console.WriteLine("Wat?");
             }
